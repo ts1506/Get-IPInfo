@@ -27,7 +27,7 @@ $PSDefaultParameterValues.Clear()
 
 function Get-IPInfo {
 	param(
-		[parameter(Mandatory=$true)]$ip
+		[parameter(Mandatory=$true)]$ip,
 		[switch]$raw = $false
 	)
 	
