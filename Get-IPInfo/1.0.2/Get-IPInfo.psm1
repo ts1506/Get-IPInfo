@@ -28,6 +28,7 @@ $PSDefaultParameterValues.Clear()
 function Get-IPInfo {
 	param(
 		[parameter(Mandatory=$true)]$ip
+		[switch]$raw = $false
 	)
 	
 	# Construct URI
@@ -38,7 +39,9 @@ function Get-IPInfo {
 	$result = Invoke-RestMethod -Uri $uri -Method Get
 	
 	# Check Result
-	if ($result.status -eq 'success') {
+	if ($raw -eq $true) {
+		$result
+	} elseif ($result.status -eq 'success') {
 		Write-Host("IP Addr:`t"+$result.query)
 		Write-Host("Country:`t"+$result.country)
 		Write-Host("City:`t`t"+$result.city)
