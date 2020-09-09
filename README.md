@@ -1,6 +1,8 @@
 # Get-IPInfo
 Quickly look up IP Information including location, ISP and Organization in PowerShell
 
+PowerShell Gallery: https://www.powershellgallery.com/packages/Get-IPInfo/
+
 # Usage
 General
 ``` 
@@ -17,6 +19,12 @@ Optional
 ```
 
 # Installation
+Automated Installation
+```
+Install-Module Get-IPInfo
+```
+
+Manual Installation
 1. Download latest binaries from the Releases tab
 2. Browse to C:\Program Files\WindowsPowershell\Modules
 3. Paste the entire Get-IPInfo folder under Modules folder
